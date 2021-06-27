@@ -13,8 +13,8 @@
 </head>
 
 <body style="font-family: Poppins;">
-    <div class="grid grid-cols-12 h-full">
-        <nav class="w-full col-span-full shadow-sm border-b-2 border-gray-200" style="height:3.5rem;">
+    <div class="grid grid-cols-12 h-full sticky top-0 z-50 bg-white">
+        <nav class="w-full col-span-full shadow-sm border-b-2 border-gray-200 " style="height:3.5rem;">
             <div class="max-w-8xl mx-auto lg:mx-4 px-2 sm:px-6 lg:px-8">
                 <div class="relative flex items-center justify-between h-16">
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -59,7 +59,7 @@
                     <!-- Profile dropdown -->
                     <div class="ml-3 relative">
                         <div>
-                            <button type="button" class="bg-pink-100 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                            <button type="button" class="bg-gray-500 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                 <span class="sr-only">Open user menu</span>
                                 <a href="Profile.html">
                                     <img class="h-8 w-8 rounded-full p-1" src="user.svg" alt="">
@@ -102,57 +102,57 @@
             </div>
         </nav>
     </div>
+    <div class="bg-fixed h-full" style="background-image: url(bg.jpg);">
+        <div class="flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <section class="text-gray-600 body-font">
+                <div class="container px-5 py-1 mx-auto">
+                    <div class="flex-wrap -m-4 grid lg:grid-cols-4">
+                        <div class="col-span-1"></div>
+                        <div class="lg:w-full col-span-2 py-16">
+                            <div class="h-full px-8 pt-4 pb-24 overflow-hidden text-center relative">
+                                <h1 class="text-left title-font text-white mb-3 font-900 text-6xl" style="font-family:Source Sans Pro;">Automatic OTP/SMS Detection Integration Android</h1>
+                                <div class="flex space-x-3 my-10">
+                                    <img src="user.svg" class="w-8 h-8 p-1 border-2 border-red rounded-full">
+                                    <span class="text-indigo-500 text-lg font-semibold">John Doe</span>
+                                </div>
+                                <p class="leading-relaxed mb-3 text-justify px-3 text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ab, dicta delectus laborum nostrum provident, sequi vitae eaque quo harum natus aliquid accusantium, dolore repellendus! Totam voluptas odit repellendus quibusdam.<br><br>Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit. Iste, iure odio, perferendis sed necessitatibus culpa dolore dolor mollitia debitis delectus cumque repudiandae excepturi omnis. Sit voluptate vero veniam quibusdam
+                                    rem?
+                                </p>
 
-    <div class="flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white">
-        <section class="text-gray-600 body-font">
-            <div class="container px-5 py-1 mx-auto">
-                <div class="flex-wrap -m-4 grid grid-cols-4">
-                    <div class="col-span-1"></div>
-                    <div class="lg:w-full col-span-2 py-16">
-                        <div class="h-full bg-white bg-opacity-75 px-8 pt-4 pb-24 overflow-hidden text-center relative">
-                            <h1 class="text-left title-font text-gray-800 mb-3 font-900 text-6xl" style="font-family:Source Sans Pro;">Automatic OTP/SMS Detection Integration Android</h1>
-                            <div class="flex space-x-3 my-10">
-                                <img src="user.svg" class="p-2 border-2 border-red rounded-full">
-                                <span class="mt-2 text-indigo-500 text-lg font-semibold">John Doe</span>
-                            </div>
-                            <p class="leading-relaxed mb-3 text-justify px-3 text-black"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ab, dicta delectus laborum nostrum provident, sequi vitae eaque quo harum natus aliquid accusantium, dolore repellendus! Totam voluptas odit repellendus quibusdam.<br><br>Lorem
-                                ipsum dolor sit amet consectetur adipisicing elit. Iste, iure odio, perferendis sed necessitatibus culpa dolore dolor mollitia debitis delectus cumque repudiandae excepturi omnis. Sit voluptate vero veniam quibusdam rem?</p>
-
-                            <div class="text-center mt-10 leading-none flex pl-2 w-full py-2 mb-5">
-                                <span class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                                <div class="text-center mt-10 leading-none flex pl-2 w-full py-2 mb-5">
+                                    <span class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                                     <img src="like.svg" class="mr-2 h-6 w-4 cursor-pointer">12
                                 </span>
-                            </div>
-
-                            <div class="border-t-2 border-gray-500 ">
-                                <div class="mb-5">
-                                    <p class="text-left pl-10 pt-5 leading-snug text-black font-semibold">Comments<span>(10)</span></p>
                                 </div>
-                                <textarea class="float-left p-1 ml-10 border-2 border-gray-300 rounded-md w-1/2"></textarea>
-                                <br>
-                                <br>
-                                <div id="comments" class="">
-                                    <div class="">
-                                        <div class="flex space-x-2 mt-10">
-                                            <img src="user.svg" class="p-2 border-2 border-red rounded-full">
-                                            <span class="mt-2 text-gray-800 text-sm font-medium">John Doe</span>
+
+                                <div class="border-t-2 border-gray-500">
+                                    <p class="float-left px-3 my-2 font-semibold text-white">Comments<span>(10)</span></p><br><br>
+                                    <form class="flex flex-shrink-1">
+                                        <textarea class="float-left ml-4 w-1/2 p-2 rounded-md border-2 border-gray-500"></textarea>
+                                        <button class="bg-gray-100 w-1/5 rounded-xl text-black font-semibold text-lg ml-10">Submit</button>
+                                    </form>
+                                    <div>
+                                        <div class="flex space-x-3 mt-10">
+                                            <img src="user.svg" class="w-7 h-7 p-1 border-2 border-red rounded-full">
+                                            <span class="text-indigo-500 text-sm font-medium mt-1">John Doe</span>
                                         </div>
-                                        <p class="text-sm float-left px-10">This is a random comment</p>
+                                        <p class="float-left mt-2 ml-10 font-medium text-base text-white">This is a random comment</p>
                                     </div>
-                                    <div class="">
-                                        <div class="flex space-x-2 mt-10">
-                                            <img src="user.svg" class="p-2 border-2 border-red rounded-full">
-                                            <span class="mt-2 text-gray-800 text-sm font-medium">John Doe</span>
+                                    <div>
+                                        <div class="flex space-x-3 mt-10">
+                                            <img src="user.svg" class="w-7 h-7 p-1 border-2 border-red rounded-full">
+                                            <span class="text-indigo-500 text-sm font-medium mt-1">John Doe</span>
                                         </div>
-                                        <p class="text-sm float-left px-10">This is a random comment</p>
+                                        <p class="float-left mt-2 ml-10 font-medium text-base text-white">This is a random comment</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 </body>
 
