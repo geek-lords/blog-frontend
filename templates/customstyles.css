@@ -1,0 +1,47 @@
+.bg-custom {
+    background-color: #171614;
+}
+
+.circle-1 {
+    width: 100px;
+    height: 100px;
+    background: #252AA0;
+    opacity: 71%;
+    border-radius: 50%;
+    z-index: -10;
+    margin-left: -22%;
+}
+
+.circle-2 {
+    width: 100px;
+    height: 100px;
+    background: #06BA9A;
+    opacity: 86%;
+    border-radius: 50%;
+    z-index: -10;
+    margin-left: -42%;
+    margin-top: 10%;
+}
+
+.frost {
+    backdrop-filter: blur(16px);
+    background: linear-gradient(to right, rgba(104, 104, 104, 0.14), #D8940B 200%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    margin-left: 10px;
+    transition: all 2s ease;
+}
+
+.frost:hover {
+    background-position: right bottom;
+}
+
+.custom-bg {
+    background: linear-gradient(to right, #f0ad26 50%, #D8940B 150%);
+}
+
+.custom-font {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.font-custom {}
