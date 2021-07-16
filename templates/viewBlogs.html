@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 </head>
 
 <body style="font-family: Poppins;">
@@ -46,13 +48,14 @@
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div class="flex-shrink-0 flex items-center">
                             <img class="block lg:hidden h-8 w-auto" src="" alt="">
-                            <img class="hidden lg:block h-8 w-auto" src="../static/logoname.svg" alt="">
+                            <img class="hidden lg:block h-8 w-auto" src="../static/logo.svg" alt="">
                         </div>
                     </div>
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-end sm:mr-10">
                         <div class="hidden sm:block">
-                            <div class="flex space-x-4">
-                                <a href="" class="text-gray-700 py-3 text-sm font-medium border-b-2 border-blue-500" aria-current="page">Blogs</a>
+                            <div class="flex space-x-6">
+                                <a href="listBlogs.html" class="text-gray-700 py-3 text-sm font-medium border-b-2 " aria-current="page">Blogs</a>
+                                <a href="createBlog.html" class="text-gray-700 py-3 text-sm font-medium border-b-2 " aria-current="page">Add Blogs</a>
                             </div>
                         </div>
                     </div>
@@ -108,8 +111,8 @@
                 <div class="container px-5 py-1 mx-auto">
                     <div class="flex-wrap -m-4 grid lg:grid-cols-4">
                         <div class="col-span-1"></div>
-                        <div class="lg:w-full col-span-2 py-16">
-                            <div class="h-full px-8 pt-4 pb-24 overflow-hidden text-center relative">
+                        <div class="lg:w-full col-span-2 py-16" id="blog">
+                            <!--<div class="h-full px-8 pt-4 pb-24 overflow-hidden text-center relative">
                                 <h1 class="text-left title-font text-white mb-3 font-900 text-6xl" style="font-family:Source Sans Pro;">Automatic OTP/SMS Detection Integration Android</h1>
                                 <div class="flex space-x-3 my-10">
                                     <img src="../static/user.svg" class="w-8 h-8 p-1 border-2 border-red rounded-full">
@@ -149,13 +152,14 @@
                                         <p class="float-left mt-2 ml-10 font-medium text-base text-white">This is a random comment</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </div>
+    <script src="/js/viewBlog.js "></script>
 </body>
 
 </html>

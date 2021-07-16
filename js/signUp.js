@@ -1,4 +1,4 @@
-BASE_URL = "https:/localhost/"; // Put your base url here
+BASE_URL = "http://127.0.0.1:5000"; // Put your base url here
 
 function sampleGetRequest() {
     // Sample GET request
@@ -28,7 +28,7 @@ function sampleGetRequest() {
     });
 }
 
-function samplePostRequest(first_name, last_name, email, password) {
+function _create_account(first_name, last_name, email, password) {
     // Sample POST request
 
     obj = {
@@ -62,4 +62,15 @@ function samplePostRequest(first_name, last_name, email, password) {
             alert(response)
         }
     });
+}
+
+function create_account(e) {
+    e.preventDefault();
+
+    fname = document.getElementById("fname").value;
+    lname = document.getElementById("lname").value;
+    email = document.getElementById("email").value;
+    pass = document.getElementById("pass").value;
+
+    _create_account(fname, lname, email, pass);
 }

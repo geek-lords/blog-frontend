@@ -2,13 +2,14 @@ from flask import Flask, request
 from uuid import uuid4
 from email_validator import validate_email, EmailNotValidError
 import pymysql
-
+from flask_cors import CORS
 from db_utilities import connection
 
 error_code = 400
 password_min = 6
 password_max = 40
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/create_account", methods=["POST"])
@@ -102,7 +103,7 @@ def create_blog():
         return {"error": "User Information already exists"}, error_code
 
 
-@app.route("/fetch_blogs", methods=["GET"])
+@app.route("/fetch_blogs", methods=["POST"])
 def fetch_blogs():
     try:
         if not request.json:
@@ -120,14 +121,14 @@ def fetch_blogs():
                 "from blog join Users "
                 "on blog.user_id = Users.id "
                 "where blog.user_id <> %s",
-                user_id)
+            user_id)
             return {"list_blogs": cur.fetchall()}, 200
     except KeyError:
         print("Important Data not found - Key Error")
         return {"error": "Important Data not found"}, error_code
 
 
-@app.route("/fetch_blogs/<blog_id>", methods=["GET"])
+@app.route("/fetch_blogs/<blog_id>", methods=["POST"])
 def fetch_blog(blog_id):
     if not request.json:
         return {"error": "JSON Data not found"}

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 </head>
 
 <body style="font-family: Poppins;">
@@ -43,7 +45,7 @@
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div class="flex-shrink-0 flex items-center">
                             <img class="block lg:hidden h-8 w-auto" src="" alt="">
-                            <img class="hidden lg:block h-8 w-auto" src="../static/logoname.svg" alt="">
+                            <img class="hidden lg:block h-8 w-auto" src="../static/logo.svg" alt="">
                         </div>
                     </div>
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-end sm:mr-10">
@@ -108,27 +110,28 @@
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Create Blog</h1>
                 </div>
                 <div class="lg:w-3/4 md:w-2/3 mx-auto">
-                    <form class="flex flex-wrap -m-2" action="">
+                    <form class="flex flex-wrap -m-2" onsubmit="getdata(event)">
                         <div class="p-2 w-full">
                             <div class="relative">
                                 <label for="email" class="leading-7 text-sm text-gray-600">Title</label>
-                                <input type="text" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                <input type="text" id="title" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                             </div>
                         </div>
                         <div class="p-2 w-full">
                             <div class="relative">
                                 <label for="message" class="leading-7 text-sm text-gray-600">Blog</label>
-                                <textarea id="blog" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-40 text-base outline-none text-gray-700 py-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                                <textarea id="blog" name="blog" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-40 text-base outline-none text-gray-700 py-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                             </div>
                         </div>
                         <div class="p-2 w-full">
-                            <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Create</button>
+                            <input type="submit" value="Create" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"></input>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
     </div>
+    <script src="/js/addBlogs.js"></script>
 </body>
 
 </html>
