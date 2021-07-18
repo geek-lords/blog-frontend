@@ -79,9 +79,5 @@ $(document).ready(function() {
 });
 
 function sendId(id) {
-    if (!!$.cookie('blogid')) {
-        document.cookie = "blogid" + "=" + (id || "") + "; path=/";
-    } else {
-        document.cookie = "blogid" + "=" + (id || "") + "; path=/";
-    }
+    document.cookie = "blogid" + "=" + (id || "") + "; path=/";
 }

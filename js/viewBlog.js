@@ -12,6 +12,40 @@ function getCookie(name) {
     return null;
 }
 
+function comment() {
+    user_id = getCookie("user_id");
+    blogid = getCookie("blogid");
+    comments = document.getElementById("comment").value;
+
+    obj = {
+        user_id: user_id,
+        comment: comments
+    }
+    $.ajax({
+        type: "POST",
+        url: BASE_URL + "/comment/" + blogid,
+        data: JSON.stringify(obj),
+        dataType: "json",
+        processData: false,
+        contentType: "application/json",
+        success: function(response) {
+            if (response.hasOwnProperty("error")) {
+                alert(response.error)
+            } else {
+                console.log(response)
+            }
+        },
+        statusCode: {
+            401: function(xhr) {
+                var obj = JSON.parse(xhr.responseText)
+                alert(obj.error)
+            }
+        },
+        failure: function(response) {
+            alert(response)
+        },
+    });
+}
 
 
 function viewBlog(uid, blogid) {
@@ -32,6 +66,8 @@ function viewBlog(uid, blogid) {
             } else {
                 console.log(response)
                 blogs = response["blog"]
+                comments = response["comments"]
+                console.log(comments["length"]);
 
                 $('#blog').append(`
                         <div class="h-full px-8 pt-4 pb-24 overflow-hidden text-center relative">
@@ -45,15 +81,15 @@ function viewBlog(uid, blogid) {
 
                         <div class="text-center mt-10 leading-none flex pl-2 w-full py-2 mb-5">
                             <span class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                            <img src="../static/like.svg" class="mr-2 h-6 w-4 cursor-pointer">12
+                            <img src="../static/like.svg" class="mr-2 h-6 w-4 cursor-pointer">${blogs["like_count"]}
                         </span>
                         </div>
 
                         <div class="border-t-2 border-gray-500">
-                            <p class="float-left px-3 my-2 font-semibold text-white">Comments<span>(10)</span></p><br><br>
+                            <p class="float-left px-3 my-2 font-semibold text-white">Comments<span>(${comments["length"]})</span></p><br><br>
                             <form class="flex flex-shrink-1">
-                                <textarea class="float-left ml-4 w-1/2 p-2 rounded-md border-2 border-gray-500"></textarea>
-                                <button class="bg-gray-100 w-1/4 lg:w-1/5 rounded-xl text-black font-semibold text-sm ml-10 lg:text-lg">Submit</button>
+                                <textarea class="float-left ml-4 w-1/2 p-2 rounded-md border-2 border-gray-500" id="comment"></textarea>
+                                <button class="text-center bg-gray-100 w-1/4 lg:w-1/5 rounded-xl text-black font-semibold text-sm ml-10 lg:text-lg" id="subComment">Submit</button>
                             </form>
                             <div>
                                 <div class="flex space-x-3 mt-10">
