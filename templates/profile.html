@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="customstyles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&display=swap" rel="stylesheet">
@@ -48,7 +49,7 @@
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div class="flex-shrink-0 flex items-center">
                             <img class="block lg:hidden h-8 w-auto" src="" alt="">
-                            <img class="hidden lg:block h-8 w-auto" src="../static/logoname.svg" alt="">
+                            <img class="hidden lg:block h-8 w-auto" src="../static/logo.svg" alt="">
                         </div>
                     </div>
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-end sm:mr-10">
@@ -122,7 +123,8 @@
                                 </div>
                                 -->
                                 <h1 id="left_name" class="text-gray-900 font-bold text-xl leading-8 my-1"></h1>
-                                <h3 class="text-gray-600 font-lg text-semibold leading-6">John Doe</h3>
+                                <div id="profile">
+                                </div>
                                 <ul class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                                     <li class="flex items-center py-3">
                                         <span>Status</span>
@@ -146,8 +148,8 @@
                             <p class="border-b-2 border-gray-200 mb-5 font-medium text-base ">Your Blogs</p>
                             <section class="text-gray-500 body-font overflow-hidden bg-white shadow-md rounded-md ">
                                 <div class="container px-5 py-8 mx-auto">
-                                    <div class="-my-8 divide-y-2 divide-gray-100">
-                                        <!--Blog Card Starts-->
+                                    <div class="-my-8 divide-y-2 divide-gray-100" id="user_blog">
+                                        <!--Blog Card Starts
                                         <div class="py-8 flex flex-wrap md:flex-nowrap">
                                             <div class="md:flex-grow">
                                                 <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Bitters hashtag waistcoat fashion axe chia unicorn</h2>
@@ -161,36 +163,7 @@
                                                 </a>
                                                 <button class="float-right p-2 bg-red-500 rounded-md shadow-md text-white">Delete</button>
                                             </div>
-                                        </div>
-                                        <div class="py-8 flex flex-wrap md:flex-nowrap">
-                                            <div class="md:flex-grow">
-                                                <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Bitters hashtag waistcoat fashion axe chia unicorn</h2>
-                                                <p class="leading-relaxed text-sm font-medium ">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid
-                                                    hoodie portland craft beer.</p>
-                                                <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
-                                                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M5 12h14"></path>
-                                                        <path d="M12 5l7 7-7 7"></path>
-                                                    </svg>
-                                                </a>
-                                                <button class="float-right p-2 bg-red-500 rounded-md shadow-md text-white">Delete</button>
-                                            </div>
-                                        </div>
-                                        <div class="py-8 flex flex-wrap md:flex-nowrap">
-                                            <div class="md:flex-grow">
-                                                <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Bitters hashtag waistcoat fashion axe chia unicorn</h2>
-                                                <p class="leading-relaxed text-sm font-medium">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid
-                                                    hoodie portland craft beer.</p>
-                                                <a class="text-indigo-500 inline-flex items-center mt-4">Learn More
-                                                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path d="M5 12h14"></path>
-                                                        <path d="M12 5l7 7-7 7"></path>
-                                                    </svg>
-                                                </a>
-                                                <button class="float-right p-2 bg-red-500 rounded-md shadow-md text-white">Delete</button>
-                                            </div>
-                                        </div>
-                                        <!--Blog Card End-->
+                                        </div>Blog Card End-->
                                     </div>
                                 </div>
                             </section>
@@ -203,6 +176,7 @@
 
     </div>
     </div>
+    <script src="/js/profile.js"></script>
 </body>
 
 </html>

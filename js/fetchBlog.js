@@ -39,7 +39,7 @@ function fetchblogs(uid) {
                                 <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3 ">${element["title"]}</h1>
                                 <input type="hidden" id="blogid" value="${element["id"]}"> 
                                 <p class="leading-relaxed mb-3 line-3">${element["content"]}</p>
-                                <a class="text-indigo-500 inline-flex items-center cursor-pointer" href="viewBlogs.html" onclick=sendId("${element["id"]}") >Learn More
+                                <a class="text-indigo-500 inline-flex items-center cursor-pointer"  onclick=sendId("${element["id"]}") >Learn More
                                     <svg class="w-4 h-4 ml-2 " viewBox="0 0 24 24 " stroke="currentColor " stroke-width="2 " fill="none " stroke-linecap="round " stroke-linejoin="round ">
                                         <path d="M5 12h14 "></path>
                                         <path d="M12 5l7 7-7 7 "></path>
@@ -79,5 +79,5 @@ $(document).ready(function() {
 });
 
 function sendId(id) {
-    document.cookie = "blogid" + "=" + (id || "") + "; path=/";
+    window.location = "viewBlogs.html?blog=" + id;
 }

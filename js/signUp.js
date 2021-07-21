@@ -1,5 +1,26 @@
 BASE_URL = "http://127.0.0.1:5000"; // Put your base url here
 
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
 function sampleGetRequest() {
     // Sample GET request
 
@@ -13,7 +34,8 @@ function sampleGetRequest() {
             if (response.hasOwnProperty("error")) {
                 alert(response.error)
             } else {
-                alert("response : " + response)
+                setCookie("user_id", response.user_id, 30);
+                window.location = "listBlogs.html"
             }
         },
         statusCode: {
@@ -49,7 +71,8 @@ function _create_account(first_name, last_name, email, password) {
             if (response.hasOwnProperty("error")) { // If server returns some error message
                 alert(response.error)
             } else {
-                alert("response : " + response)
+                setCookie("user_id", response.user_id, 30);
+                window.location = "listBlogs.html"
             }
         },
         statusCode: {

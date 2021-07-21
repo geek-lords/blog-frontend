@@ -29,7 +29,7 @@ function addblogs(uid, title, blogs) {
             if (response.hasOwnProperty("error")) {
                 alert(response.error)
             } else {
-                console.log(response)
+                window.location = "listBlogs.html"
             }
         },
         statusCode: {
